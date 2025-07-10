@@ -1,7 +1,7 @@
 ## Semester Project in "Introduction to Quantum Computing" class that I took part during my studies in Technical University of Crete.
 ### **Repository Overview**
 
-The cause of this repository is to show how someone can reproduce the results of the paper "Quantum Generative Adversarial Networks for learning and loading random distributions", published by Christa Zoufal, Aurélien Lucchi2 and Stefan Woerner.
+The cause of this repository is to show how someone can reproduce the results of the paper "Quantum Generative Adversarial Networks for learning and loading random distributions", published by Christa Zoufal, Aurélien Lucchi and Stefan Woerner.
 The reproduction of the results can be shown in 2 ways:
 
 - With a Jupiter notebook
