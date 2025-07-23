@@ -1,32 +1,91 @@
-## Semester Project in "Introduction to Quantum Computing" class that I took part during my studies in Technical University of Crete.
-### **Repository Overview**
+# Quantum Generative Adversarial Networks for Distribution Learning
+**Semester Project** - Introduction to Quantum Computing  
+*Technical University of Crete, professor : Mr D. Angelakis*
 
-The cause of this repository is to show how someone can reproduce the results of the paper "Quantum Generative Adversarial Networks for learning and loading random distributions", published by Christa Zoufal, Aurélien Lucchi and Stefan Woerner.
-The reproduction of the results can be shown in 2 ways:
+## Repository Overview
+This repository reproduces results from the paper:  
+**"Quantum Generative Adversarial Networks for learning and loading random distributions"**  
+(Christa Zoufal, Aurélien Lucchi, Stefan Woerner)
 
-- With a Jupiter notebook
-- With a simple tool created using python
+The Jupyter notebook implementation demonstrates:
+- Quantum Generative Adversarial Network (qGAN) architecture
+- Learning and loading random distributions using quantum circuits
+- Comparative analysis with classical approaches
 
-Jupiter notebook implementation is there for simplicity and to see the results easily. Python tool is an easy way to try things yourself, by modifying differrent arguments in training and also loading the distribution you want.
+## ⚙️ Setup Instructions
 
-Regardless the way you choose to run the code, there are some basic and really important steps that you must follow in order to have compatible and working versions of libraries.
-You can see in the repository the file `requirements.txt` that is an exact copy of the libraries used in my python environment.
-
-**NOTE** : It is highly reccomended, in order to avoid issues with compatibility in this or your other projects, to use a virtual environment to run this project.
-
-How to do it?
+### 1. Clone Repository
 ```bash
-python -m venv your_venv_name
-source your_venv_name/bin/activate
+git clone https://github.com/your-username/Distribution-Learning-qGAN.git
+cd Distribution-Learning-qGAN
+```
+
+### 2. Create and Activate Virtual Environment
+```bash
+python -m venv qgan-env
+```
+
+- **Linux/macOS**:
+  ```bash
+  source qgan-env/bin/activate
+  ```
+- **Windows**:
+  ```cmd
+  .\qgan-env\Scripts\activate
+  ```
+
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
 ```
-Arguments:
+
+### 4. Configure Jupyter Kernel (Critical Step!)
 ```bash
---batch_size INPUT
-```
-And to execute:
-```bash
-source your_venv_name/bin/activate  # If not already done before
-python train.py
+python -m ipykernel install --user --name=qgan-env
 ```
 
+## Running the Notebook
+1. Start Jupyter from activated environment:
+   ```bash
+   jupyter notebook
+   ```
+2. In your browser:
+   - Open `project_final.ipynb`
+   - Verify kernel: **Kernel > Change Kernel > qgan-env**
+3. Execute cells sequentially (Use **Kernel > Restart & Run All** for full execution)
+
+## Expected Outputs
+Successful execution will generate:
+1. 20,000 samples of a lognormal distribution $\in [0, 7]$.
+2. Training loss curves for generator/discriminator
+3. Quantum circuit diagrams for data loading
+4. Comparative histograms (target vs. learned distributions)
+5. Fidelity metrics at different training stages
+6. Convergence plots showing training progress
+
+## ℹ️ Project Notes
+### Key Parameters (modify in notebook)
+```python
+num_qubits = 3           # System size (2-5 recommended)
+batch_size = 100          # Training samples per epoch
+epochs = 1000             # Training iterations
+gen_lr = 0.01             # Generator learning rate
+disc_lr = 0.01            # Discriminator learning rate
+noise_dim = 2             # Generator noise input dimension
+```
+
+### Hardware Requirements
+- **Simulation**: Nothing significant, really fast and effective.
+
+### Reference Results
+```
+│ Metric          │ Value       │
+├─────────────────┼─────────────┤
+│ Relative Entropy|   0.0003    │
+│ KS statistic    │   0.0081    │
+│ Training Time   │   ~5 min    │
+```
+
+## References
+1. Zoufal, C., Lucchi, A., & Woerner, S. (2019). [Quantum Generative Adversarial Networks for learning and loading random distributions](https://www.nature.com/articles/s41534-019-0223-2). *npj Quantum Information*
+2. Qiskit Machine Learning Documentation: [qiskit.org/ecosystem/machine-learning](https://qiskit.org/ecosystem/machine-learning/)
