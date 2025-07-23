@@ -56,7 +56,7 @@ python -m ipykernel install --user --name=qgan-env
 
 ## Expected Outputs
 Successful execution will generate:
-1. 20,000 samples of a lognormal distribution $\in [0, 7]$.
+1. 20,000 samples of a lognormal distribution $x \in [0, 7]$.
 2. Training loss curves for generator/discriminator
 3. Quantum circuit diagrams for data loading
 4. Comparative histograms (target vs. learned distributions)
@@ -65,14 +65,7 @@ Successful execution will generate:
 
 ## Project Notes
 ### Key Parameters (modify in notebook)
-```python
-num_qubits = 3           # System size (2-5 recommended)
-batch_size = 100          # Training samples per epoch
-epochs = 1000             # Training iterations
-gen_lr = 0.01             # Generator learning rate
-disc_lr = 0.01            # Discriminator learning rate
-noise_dim = 2             # Generator noise input dimension
-```
+All the important key parameters are in the `Config` cell, in order to make it easier for everyone to experiment with different methods.
 
 ### Hardware Requirements
 - **Simulation**: Nothing significant, really fast and effective.
