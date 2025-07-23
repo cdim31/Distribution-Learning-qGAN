@@ -12,7 +12,7 @@ The Jupyter notebook implementation demonstrates:
 - Learning and loading random distributions using quantum circuits
 - Comparative analysis with classical approaches
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone Repository
 ```bash
@@ -63,7 +63,7 @@ Successful execution will generate:
 5. Fidelity metrics at different training stages
 6. Convergence plots showing training progress
 
-## ℹ️ Project Notes
+## Project Notes
 ### Key Parameters (modify in notebook)
 ```python
 num_qubits = 3           # System size (2-5 recommended)
