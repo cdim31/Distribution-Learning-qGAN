@@ -12,6 +12,10 @@ The Jupyter notebook implementation demonstrates:
 - Learning and loading random distributions using quantum circuits
 - Comparative analysis with classical approaches
 
+Report provides an analytic explanation on many aspects of `Quantum Computing`, referred to the paper, and to the paper itself. I **highly recommend** that you read it before going on with the actual reproduction part. 
+
+Presentation was used during course and you can also see it here, serving as a brief version of the report.
+
 ## Setup Instructions
 
 ### 1. Clone Repository
@@ -49,7 +53,7 @@ python -m ipykernel install --user --name=qgan-env
    ```bash
    jupyter notebook
    ```
-2. In your browser:
+2. In your browser or any suitable app:
    - Open `project_final.ipynb`
    - Verify kernel: **Kernel > Change Kernel > qgan-env**
 3. Execute cells sequentially (Use **Kernel > Restart & Run All** for full execution)
